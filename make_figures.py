@@ -25,7 +25,7 @@ try:
     import arabic_reshaper
     from bidi.algorithm import get_display
     fa = lambda s: get_display(arabic_reshaper.reshape(s))
-    matplotlib.rcParams["font.family"] = "Tahoma"   # any font with Arabic-script glyphs
+    matplotlib.rcParams["font.family"] = "Tahoma"   
     NAMES = {"pairwise": fa("دوبه‌دو"),
              "seqcounter": fa("شمارندهٔ متوالی"),
              "cardnetwrk": fa("شبکهٔ کاردینالیتی")}

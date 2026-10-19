@@ -14,13 +14,13 @@ All three configurations use the same RC2 MaxSAT solver with the `g3` backend. T
 
 ## Experimental Setup
 
-The allocation problem contains \(n\) tasks and \(n\) processors. Each assignment has an integer cost generated uniformly between 1 and 10.
+The allocation problem contains $n$ tasks and $n$ processors. Each assignment has an integer cost generated uniformly between 1 and 10.
 
 The experiment uses the following settings:
 
 | Parameter | Value |
 |---|---|
-| Problem sizes (\(n\)) | 25, 40, 50, 60, 65, 100 |
+| Problem sizes ($n$) | 25, 40, 50, 60, 65, 100 |
 | Instances per size | 10 |
 | Encodings | Pairwise, Sequential Counter, Cardinality Network |
 | Solver | RC2 |
@@ -86,9 +86,9 @@ The reported experiment contains 180 runs:
 
 - 174 runs completed within the timeout.
 - 6 runs timed out.
-- All 6 timeouts occurred in instances 0 and 1 at problem size \(n=50\), across all three encodings.
+- All 6 timeouts occurred in instances 0 and 1 at problem size $n=50$, across all three encodings.
 
-For \(n=100\), the pairwise encoding generated 1,000,100 clauses, compared with 69,300 for the sequential counter and 128,500 for the cardinality network.
+For $n=100$, the pairwise encoding generated 1,000,100 clauses, compared with 69,300 for the sequential counter and 128,500 for the cardinality network.
 
 These results apply to the tested allocation formulation, generated instances, solver configuration, and experimental environment. They should not be interpreted as a general ranking of encodings for all Max-SAT problems.
 
@@ -97,3 +97,7 @@ These results apply to the tested allocation formulation, generated instances, s
 The repository provides the experiment script, generated results, environment metadata, and figure-generation script to support inspection and reproduction of the reported experiments.
 
 The environment metadata records the Python and `python-sat` versions, hardware and platform information, solver configuration, random seed, and package versions.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
